@@ -97,6 +97,8 @@ def build_report_records(reports, persons):
             "reference_ids": r["reference_ids"],
             "person_ids": r["person_ids"],
             "places": place_names(r),
+            "dates": [{"raw": d["raw"], "key": sort_key(d), "precision": d["precision"]}
+                      for d in r["dates"]],
             "mentions": {pid: names_by_id[pid] for pid in r["person_ids"]},
         })
     return sorted(records, key=lambda rec: (rec["date_key"], rec["id"]))
