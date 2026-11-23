@@ -24,8 +24,14 @@ and all data is pre-built in `web/data/`.
   names with evidence, connections, and their reports collapsed to one-line
   summaries (click a report to read it in full). For a report, the people it
   names and its full text.
-- **New tab** (*empty for now*): a second panel tab kept for a team
-  member to decide on; see "Task: the new tab" in `DEVELOPER.md`.
+- **Dates tab**: every date mentioned in a report, compared with the date
+  the report was written. A date before the report date is labelled
+  "Already happened"; a date after it is labelled "Planned" (the event had
+  not happened yet when the report was written). A year-only or month-only
+  date that matches the report's own year or month can't be placed, so it
+  is labelled "Unclear". Planned dates are listed first. Each row shows the
+  report and its people and places, and clicking a row selects the report
+  in the other views.
 - **Undo** (or Ctrl+Z / Cmd+Z) goes back to the previous selection.
 
 All views are linked: selecting a person or report in one place
@@ -75,7 +81,7 @@ web/           what the page loads: styles, JavaScript, D3, page data
 | `processing/step1_parse_reports.py` | Raw text to structured JSON |
 | `processing/step2_person_candidates.py` | Suggest names that may be the same person |
 | `processing/step3_resolve_persons.py` | Apply reviewed decisions (merge aliases, split shared names) |
-| `processing/step4_build_network.py` | Network data for the page |
+| `processing/step4_build_network.py` | Network data for the page, including each report's dates |
 | `processing/step5_build_ai_summaries.py` | Checks the AI-written summaries and copies them for the page |
 | `processing/js_output.py` | Helper: writes processed data as JavaScript for the page |
 | `index.html` | The page; open this to run the tool |
@@ -84,7 +90,7 @@ web/           what the page loads: styles, JavaScript, D3, page data
 | `web/js/tooltip.js` | The hover tooltip |
 | `web/js/network.js` | The people-and-reports network |
 | `web/js/summaries.js` | AI-written person summaries in the Details tab |
-| `web/js/new_tab.js` | An empty panel tab for a team member to fill in |
+| `web/js/new_tab.js` | The Dates tab in the panel |
 | `web/js/panel.js` | The right-hand panel and its Details tab |
 | `web/js/main.js` | Header controls (search, Undo, Reset) and start-up |
 | `DEVELOPER.md` | Guide for team members changing the code |
@@ -102,6 +108,7 @@ was compared in two forms, people only (people linked when named in the
 same report) and people and reports; the final tool uses people and
 reports, which shows which report connects people. An earlier timeline view
 (report dates and mentioned dates on a time axis) was replaced by a Dates
-tab, a readable list of the same dates; that tab was later removed and its
-place left empty for a team member to design.
+tab, a readable list of the same dates; that tab was later removed and then
+rebuilt as the current Dates tab, which labels each mentioned date as already
+happened or planned by comparing it with the report's own date.
 

@@ -3,7 +3,7 @@
  * --------
  * Right-hand panel with two tabs:
  *   Details   the evidence for the current selection (a person or a report)
- *   New tab   empty for now; a team member decides what goes here (new_tab.js)
+ *   Dates tab: dates mentioned in the reports (new_tab.js)
  *
  * Any new selection switches back to the Details tab, so the analyst always
  * sees the result of a click (visibility of system status).

@@ -28,7 +28,7 @@ dataset.txt ──► processing/run_all.py ──► web/data/*.js ──► in
 | 1 `step1_parse_reports.py` | `dataset.txt` | `reports_raw.json` | Splits the text into reports with fields (date, people, places, text). |
 | 2 `step2_person_candidates.py` | (used by step 3) | nothing | Suggests names that might be the same person. |
 | 3 `step3_resolve_persons.py` | step 1 output, `person_review.json` | `persons.json`, `reports_resolved.json` | Applies the reviewed decisions: merges aliases, splits a shared name. |
-| 4 `step4_build_network.py` | step 3 output | `web/data/network.js` | People, reports and the links between them. |
+| 4 `step4_build_network.py` | step 3 output | `web/data/network.js` | People, reports (with the dates each one mentions) and the links between them. |
 | 5 `step5_build_ai_summaries.py` | `data/manual/ai_summaries/` | `web/data/ai_summaries.js` | Checks that every person has a summary and copies them for the page. |
 
 Rebuild everything with `python3 processing/run_all.py` (standard library
@@ -48,7 +48,7 @@ only uses files loaded before it.
 | `web/js/tooltip.js` | The hover box | (creates `Tooltip`) |
 | `web/js/network.js` | The people-and-reports network on the left | `App.network` |
 | `web/js/summaries.js` | The AI-written summary boxes | `App.summaries` |
-| `web/js/new_tab.js` | An empty panel tab (see "Task: the new tab") | `App.newTab` |
+| `web/js/new_tab.js` | The Dates tab: lists the dates mentioned in reports and whether each is past or planned | `App.newTab` |
 | `web/js/panel.js` | The right-hand panel and its Details tab | `App.panel` |
 | `web/js/main.js` | Search box, Undo, Reset, keyboard shortcuts; starts everything | |
 
@@ -94,31 +94,30 @@ App.events.on("selection.myPart", () => {
 | Change how report cards look or expand | `reportList` in `panel.js` |
 | Change the person or report icons | `drawPerson` / `drawReport` in `network.js` |
 | Change the network layout (spacing, forces) | the simulation set-up in `network.js` |
-| Fill in the new tab | `new_tab.js` |
+| Change the Dates tab | `new_tab.js` |
 | Change a summary text | the JSON in `data/manual/ai_summaries/`, then rerun `run_all.py` |
 | Merge or split names | `data/manual/person_review.json`, then rerun `run_all.py` |
 | Add a field the page needs | `step4_build_network.py` (or a new step), then rerun `run_all.py` |
+| Change how a date counts as past, planned or unclear | `relation()` in `new_tab.js` |
+| Add more date information to the page | `step4_build_network.py` (the "dates" field), then rerun `run_all.py` |
 
-## Task: the new tab
+## The Dates tab
 
-The panel has an empty second tab, **New tab**, kept for a team member to
-decide what goes there. Everything else in the tool works without it.
+`web/js/new_tab.js` draws the Dates tab. It gets its data from the `dates`
+field that `step4_build_network.py` writes for each report (the raw text,
+a sortable `YYYY-MM-DD` key and the precision: year, month or day).
 
-1. Decide what the tab should show. It helps to think about which of the
-   analyst's questions (who, what, when, where) the tool answers least well
-   so far.
-2. Open `web/js/new_tab.js`. Its top comment says how the tab is called and
-   lists the `App` data and functions you can use.
-3. Rename the tab (`label`), and rename the file to match, also in the
-   `<script>` list at the bottom of `index.html` (main folder).
-4. Build the content in `render(container)`. Select things only with
-   `App.select(...)`, so the tab stays linked with the network and Undo.
-5. If the tab needs data the page doesn't have, add a processing step: a
-   new script in `processing/` that writes a file to `web/data/` with
-   `js_output.write_js`, a line for it in `run_all.py`, and a `<script>`
-   tag for the file in `index.html` (before `web/js/app.js`), with a path
-   starting `web/data/`.
-6. Add styles at the end of `web/css/style.css` ("New tab" section).
+For each date, `relation()` compares it with the date the report was
+written, using only as many characters as the date states:
+
+- earlier than the report date: "past" (already happened)
+- later than the report date: "planned" (not yet happened when written)
+- same year/month/day as the report date: "unclear"
+
+Rows are sorted planned first. Clicking a row calls `App.select`, so the
+network, Details tab and Undo stay linked. The tab shows all of a report's
+places next to each date, because the data does not link a date to one
+specific place.
 
 ## Coding conventions
 
@@ -129,4 +128,4 @@ decide what goes there. Everything else in the tool works without it.
 - Put a short comment above each function saying what it does, and why
   when it isn't obvious.
 - After a change, open the page, try a few clicks (select a person, open a
-  report, open the new tab, Undo, Esc) and check the browser console has no errors.
+  report, open the Dates tab, Undo, Esc) and check the browser console has no errors.
