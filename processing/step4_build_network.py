@@ -65,6 +65,21 @@ def build_nodes(persons):
             for p in persons]
 
 
+def unique_dates(report):
+    """
+    The dates a report mentions, for the Dates tab: raw text, a sortable
+    'YYYY-MM-DD' key and the precision (year, month or day). A date listed
+    twice in the same report (CIA_22 lists 10/24/2003 twice) is kept once.
+    """
+    dates, seen = [], set()
+    for d in report["dates"]:
+        if d["raw"] in seen:
+            continue
+        seen.add(d["raw"])
+        dates.append({"raw": d["raw"], "key": sort_key(d), "precision": d["precision"]})
+    return dates
+
+
 def place_names(report):
     """
     Short display names for a report's places: the city if given, otherwise
@@ -97,8 +112,7 @@ def build_report_records(reports, persons):
             "reference_ids": r["reference_ids"],
             "person_ids": r["person_ids"],
             "places": place_names(r),
-            "dates": [{"raw": d["raw"], "key": sort_key(d), "precision": d["precision"]}
-                      for d in r["dates"]],
+            "dates": unique_dates(r),
             "mentions": {pid: names_by_id[pid] for pid in r["person_ids"]},
         })
     return sorted(records, key=lambda rec: (rec["date_key"], rec["id"]))

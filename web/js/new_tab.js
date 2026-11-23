@@ -5,6 +5,7 @@
  * The Dates tab in the right-hand panel. It lists every date mentioned in
  * a report, compared with the date the report was written, so the analyst
  * can see which events had already happened and which were still planned.
+ * Each row is labeled planned, unclear, same day or already happened (see relation()).
  *
  * How the tab works:
  *   The panel (panel.js) shows a "Dates" button next to "Details". When the
@@ -28,26 +29,42 @@
   const PRECISION_LENGTH = { year: 4, month: 7, day: 10 };
 
   // Order of the groups in the list: planned events first.
-  const RELATION_ORDER = { planned: 0, unclear: 1, past: 2 };
+  const RELATION_ORDER = { planned: 0, unclear: 1, same: 2, past: 3 };
   const RELATION_LABEL = {
     planned: "Planned (after report)",
     unclear: "Unclear",
+    same: "Same day as the report",
     past: "Already happened",
   };
 
   /**
+   * How precise a "YYYY-MM-DD" key is: unknown parts are written as 00,
+   * so "2003-04-00" is a month and "2003-00-00" a year.
+   */
+  function keyPrecision(key) {
+    if (key.endsWith("-00-00")) return "year";
+    if (key.endsWith("-00")) return "month";
+    return "day";
+  }
+
+  /**
    * Compare a date mentioned in a report with the date the report was
-   * written: "past", "planned" or "unclear". Only the part of the date the
-   * report actually states is compared, so a year-only date such as 2003
-   * in a report written in 2003 is "unclear", not "past".
+   * written: "past", "planned", "same" (the same day) or "unclear".
+   *
+   * Only the part BOTH dates state is compared. A year-only date such as
+   * 2003 in a report written in 2003 is "unclear", not "past"; and a report
+   * written in "April 2003" (no day) mentioning 1 April 2003 is "unclear",
+   * not "planned", because the report may have been written later in April.
    */
   function relation(date, reportKey) {
-    const length = PRECISION_LENGTH[date.precision];
+    const reportPrecision = keyPrecision(reportKey);
+    const length = Math.min(PRECISION_LENGTH[date.precision], PRECISION_LENGTH[reportPrecision]);
     const mentioned = date.key.slice(0, length);
     const written = reportKey.slice(0, length);
     if (mentioned < written) return "past";
     if (mentioned > written) return "planned";
-    return "unclear";
+    // Equal as far as both dates go: only two exact days can be "the same day".
+    return date.precision === "day" && reportPrecision === "day" ? "same" : "unclear";
   }
 
   /** One row per date mentioned in any report, planned first, then by date. */
@@ -67,7 +84,7 @@
     /** Draw the tab into `container` (a D3 selection, emptied by the panel). */
     render(container) {
       const rows = buildRows();
-      const counts = { planned: 0, unclear: 0, past: 0 };
+      const counts = { planned: 0, unclear: 0, same: 0, past: 0 };
       rows.forEach((row) => counts[row.relation]++);
 
       container.append("h2").text("Dates");
@@ -75,7 +92,8 @@
         .text("Every date mentioned in a report, compared with the date the report " +
               "was written. A date after the report date is probably a planned event.");
       container.append("p").attr("class", "dates-counts")
-        .text(`${counts.planned} planned, ${counts.unclear} unclear, ${counts.past} already happened`);
+        .text(`${counts.planned} planned, ${counts.unclear} unclear, ` +
+              `${counts.same} on the same day as the report, ${counts.past} already happened`);
 
       // Dim rows unrelated to the current selection (if any).
       const focused = App.focusedReports();

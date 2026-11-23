@@ -223,6 +223,7 @@ button.expand-all { padding: 0; color: var(--node); }
 .dates-row.dimmed { opacity: 0.35; }
 .dates-planned { border-left-color: #e0a100; }
 .dates-unclear { border-left-color: #888; }
+.dates-same    { border-left-color: #6b8fbf; }
 .dates-past    { border-left-color: #bbb; }
 .dates-head { display: flex; justify-content: space-between; font-weight: 600; }
 .dates-badge { font-size: 11px; font-weight: 400; padding: 1px 6px; border-radius: 8px; background: #eee; }

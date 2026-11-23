@@ -55,7 +55,7 @@ def main():
         result = subprocess.run([sys.executable, os.path.join(PROCESSING, script), *args], cwd=PROCESSING)
         if result.returncode != 0:
             sys.exit(f"Stopped: {script} failed.")
-    print("\nDone. Open web/index.html to use the tool.")
+    print("\nDone. Open index.html (in the main project folder) to use the tool.")
 
 
 if __name__ == "__main__":

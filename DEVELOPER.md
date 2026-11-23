@@ -108,11 +108,16 @@ field that `step4_build_network.py` writes for each report (the raw text,
 a sortable `YYYY-MM-DD` key and the precision: year, month or day).
 
 For each date, `relation()` compares it with the date the report was
-written, using only as many characters as the date states:
+written, using only the part that BOTH dates state (a report dated only
+"4/ /2003" is compared by month, even with a full day):
 
 - earlier than the report date: "past" (already happened)
 - later than the report date: "planned" (not yet happened when written)
-- same year/month/day as the report date: "unclear"
+- the exact same day: "same" (same day as the report)
+- equal as far as both dates go, but not two exact days: "unclear"
+
+Step 4 keeps each date once per report (`unique_dates`), because the
+dataset sometimes lists the same date twice.
 
 Rows are sorted planned first. Clicking a row calls `App.select`, so the
 network, Details tab and Undo stay linked. The tab shows all of a report's

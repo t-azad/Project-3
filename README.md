@@ -27,9 +27,12 @@ and all data is pre-built in `web/data/`.
 - **Dates tab**: every date mentioned in a report, compared with the date
   the report was written. A date before the report date is labelled
   "Already happened"; a date after it is labelled "Planned" (the event had
-  not happened yet when the report was written). A year-only or month-only
-  date that matches the report's own year or month can't be placed, so it
-  is labelled "Unclear". Planned dates are listed first. Each row shows the
+  not happened yet when the report was written). A date that matches the
+  report's own date as far as both go (for example a year-only date in a
+  report from that year, or a day in a report dated only by month) can't be
+  placed, so it is labelled "Unclear"; a date on the exact day of the report
+  is labelled "Same day as the report". A date listed twice in one report
+  is shown once. Planned dates are listed first. Each row shows the
   report and its people and places, and clicking a row selects the report
   in the other views.
 - **Undo** (or Ctrl+Z / Cmd+Z) goes back to the previous selection.
@@ -112,3 +115,10 @@ tab, a readable list of the same dates; that tab was later removed and then
 rebuilt as the current Dates tab, which labels each mentioned date as already
 happened or planned by comparing it with the report's own date.
 
+## Existing work and AI use
+
+- D3.js v7.9.0 (https://d3js.org), ISC license; see `web/lib/D3_LICENSE.txt`.
+- The summaries in `data/manual/ai_summaries/` were written by an AI
+  assistant (Claude, Anthropic) from the report text; they are labeled as
+  AI-written in the interface. The prompts used must be listed in the
+  project document.
