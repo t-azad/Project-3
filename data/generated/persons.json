@@ -1,0 +1,2076 @@
+[
+  {
+    "id": "p_a_atmani",
+    "name": "A. Atmani",
+    "aliases": [
+      {
+        "name": "A. Atmani",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_12"
+    ],
+    "possible_links": [
+      {
+        "id": "p_abdellah_atmani",
+        "source": "algorithm",
+        "evidence": "CIA_12: Abdellah Atmani is 'one person of interest having this name'; he denies a part in the bombings."
+      }
+    ]
+  },
+  {
+    "id": "p_a_doman",
+    "name": "A. Doman",
+    "aliases": [
+      {
+        "name": "A. Doman",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_13"
+    ],
+    "possible_links": [
+      {
+        "id": "p_ahmed_doha",
+        "source": "manual",
+        "evidence": "FBI_13: A. Doman's return address is 231 12th St., Columbia, MO, which is Ahmed Doha's apartment (FBI_10)."
+      }
+    ]
+  },
+  {
+    "id": "p_abdal_al_hawsawi",
+    "name": "Abdal al Hawsawi",
+    "aliases": [
+      {
+        "name": "Abdal al Hawsawi",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Fr. Augustin Dominique",
+        "status": "confirmed",
+        "source": "manual",
+        "evidence": "FBI_7: man traveling as Fr. Augustin Dominique identified by CSIS as Abdal al Hawsawi"
+      }
+    ],
+    "reports": [
+      "FBI_7"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_abdel_noufal",
+    "name": "Abdel Noufal",
+    "aliases": [
+      {
+        "name": "Abdel Noufal",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_abdellah_atmani",
+    "name": "Abdellah Atmani",
+    "aliases": [
+      {
+        "name": "Abdellah Atmani",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_12",
+      "CIA_39"
+    ],
+    "possible_links": [
+      {
+        "id": "p_a_atmani",
+        "source": "algorithm",
+        "evidence": "CIA_12: Abdellah Atmani is 'one person of interest having this name'; he denies a part in the bombings."
+      }
+    ]
+  },
+  {
+    "id": "p_abdillah_zinedine",
+    "name": "Abdillah Zinedine",
+    "aliases": [
+      {
+        "name": "Abdillah Zinedine",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Abu Hafs",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "CIA_7: 'Abdillah Zinedine [alias: Abu Hafs]'"
+      },
+      {
+        "name": "Mehdi Rafiki",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "CIA_7, FBI_1: Zinedine traveled on a fraudulent French passport in the name Mehdi Rafiki"
+      }
+    ],
+    "reports": [
+      "FBI_1",
+      "FBI_4",
+      "CIA_7"
+    ],
+    "possible_links": [
+      {
+        "id": "p_hafs_or_halfs",
+        "source": "algorithm",
+        "evidence": "FBI_25: a Middle Easterner called 'Hafs' or 'Halfs'; Zinedine's alias is Abu Hafs. Name only."
+      }
+    ]
+  },
+  {
+    "id": "p_abdul_ahmed_nasser",
+    "name": "Abdul Ahmed Nasser",
+    "aliases": [
+      {
+        "name": "Abdul Ahmed Nasser",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Abdul Nasser",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "CIA_33 answers the FBI_26 query on 'Abdul Nasser' with Abdul Ahmed Nasser's record"
+      }
+    ],
+    "reports": [
+      "FBI_7",
+      "FBI_26",
+      "CIA_33",
+      "DIA_1"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_abdul_jabarah",
+    "name": "Abdul Jabarah",
+    "aliases": [
+      {
+        "name": "Abdul Jabarah",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_37"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_abdul_karim",
+    "name": "Abdul Karim",
+    "aliases": [
+      {
+        "name": "Abdul Karim",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_35"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_abdul_murad",
+    "name": "Abdul Murad",
+    "aliases": [
+      {
+        "name": "Abdul Murad",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_6"
+    ],
+    "possible_links": [
+      {
+        "id": "p_murad",
+        "source": "algorithm",
+        "evidence": "CIA_7: Zinedine visiting 'Murad' in Chicago; FBI_6: Abdul Murad found at 2211 Cermak Rd., Chicago."
+      }
+    ]
+  },
+  {
+    "id": "p_abdul_al_nami_562_fenkell_ave",
+    "name": "Abdul al Nami (562 Fenkell Ave.)",
+    "aliases": [
+      {
+        "name": "Abdul al Nami",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Ali",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "FBI_34: Derwish says 'I never knew him by the name Abdul; I knew him as Ali'"
+      }
+    ],
+    "reports": [
+      "FBI_18",
+      "FBI_20",
+      "FBI_23",
+      "FBI_31",
+      "FBI_34",
+      "FBI_36",
+      "DIA_3"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_abdul_al_nami_766_livernois_rd",
+    "name": "Abdul al Nami (766 Livernois Rd.)",
+    "aliases": [
+      {
+        "name": "Abdul al Nami",
+        "status": "primary",
+        "source": null,
+        "evidence": "FBI_18 finds TWO different men named Abdul al Nami in Detroit. Every later report concerns the 562 Fenkell Ave. resident (Detroit Utilities, SCADA), so he is the default."
+      }
+    ],
+    "reports": [
+      "FBI_18"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_abu_adil",
+    "name": "Abu Adil",
+    "aliases": [
+      {
+        "name": "Abu Adil",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_abu_ayyash",
+    "name": "Abu Ayyash",
+    "aliases": [
+      {
+        "name": "Abu Ayyash",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_10",
+      "FBI_14"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_abu_somad",
+    "name": "Abu Somad",
+    "aliases": [
+      {
+        "name": "Abu Somad",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "A. Somad",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "CIA_13 and FBI_3 give the same address, 235 Buckthorn St., Inglewood"
+      }
+    ],
+    "reports": [
+      "FBI_3",
+      "CIA_13",
+      "DIA_3"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_adnan_hijazi",
+    "name": "Adnan Hijazi",
+    "aliases": [
+      {
+        "name": "Adnan Hijazi",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "A. H.",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "FBI_11: the A. H. in Newark is identified as Adnan Hijazi"
+      },
+      {
+        "name": "A. H., Newark",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "FBI_8 note 'A. H., Newark', resolved by FBI_11"
+      },
+      {
+        "name": "A. Hijazi",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "USCBP_2 package to A. Hijazi, Newark; FBI_28 says it was sent to Adnan Hijazi"
+      }
+    ],
+    "reports": [
+      "FBI_8",
+      "FBI_11",
+      "FBI_16",
+      "FBI_24",
+      "FBI_27",
+      "FBI_28",
+      "FBI_30",
+      "FBI_35",
+      "USCBP_2"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_ahmad_miner",
+    "name": "Ahmad Miner",
+    "aliases": [
+      {
+        "name": "Ahmad Miner",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_ahmed_doha",
+    "name": "Ahmed Doha",
+    "aliases": [
+      {
+        "name": "Ahmed Doha",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_10",
+      "FBI_14"
+    ],
+    "possible_links": [
+      {
+        "id": "p_a_doman",
+        "source": "manual",
+        "evidence": "FBI_13: A. Doman's return address is 231 12th St., Columbia, MO, which is Ahmed Doha's apartment (FBI_10)."
+      }
+    ]
+  },
+  {
+    "id": "p_ali_mishal",
+    "name": "Ali Mishal",
+    "aliases": [
+      {
+        "name": "Ali Mishal",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_ali_sittah",
+    "name": "Ali Sittah",
+    "aliases": [
+      {
+        "name": "Ali Sittah",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "DIA_2"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_ali_sufaat",
+    "name": "Ali Sufaat",
+    "aliases": [
+      {
+        "name": "Ali Sufaat",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Sufaat",
+        "status": "likely",
+        "source": "algorithm",
+        "evidence": "Only one Sufaat appears in the data (CIA_27, CIA_38)"
+      }
+    ],
+    "reports": [
+      "CIA_27",
+      "CIA_38",
+      "NSA_16"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_ali_talib",
+    "name": "Ali Talib",
+    "aliases": [
+      {
+        "name": "Ali Talib",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_ali_al_omari",
+    "name": "Ali al-Omari",
+    "aliases": [
+      {
+        "name": "Ali al-Omari",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_26",
+      "CIA_33"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_april_stevens",
+    "name": "April Stevens",
+    "aliases": [
+      {
+        "name": "April Stevens",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_8"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_arnoldo_ramirez",
+    "name": "Arnoldo Ramirez",
+    "aliases": [
+      {
+        "name": "Arnoldo Ramirez",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_21"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_billy_jack_hawkins",
+    "name": "Billy Jack Hawkins",
+    "aliases": [
+      {
+        "name": "Billy Jack Hawkins",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_19",
+      "FBI_25"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_boris_bugarov",
+    "name": "Boris Bugarov",
+    "aliases": [
+      {
+        "name": "Boris Bugarov",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Bugarov",
+        "status": "likely",
+        "source": "algorithm",
+        "evidence": "CIA_17 links the NSA_5 'Bugarov' to Boris Bugarov"
+      },
+      {
+        "name": "B. Bugarov",
+        "status": "likely",
+        "source": "algorithm",
+        "evidence": "CIA_21: B. Bugarov of Havana; Boris Bugarov lives in Havana (CIA_17)"
+      },
+      {
+        "name": "Boris",
+        "status": "likely",
+        "source": "algorithm",
+        "evidence": "NSA_22: 'Boris' calls from Havana to 'Pyotr' at Central Russia Airlines"
+      }
+    ],
+    "reports": [
+      "CIA_17",
+      "CIA_21",
+      "CIA_31",
+      "CIA_36",
+      "NSA_5",
+      "NSA_11",
+      "NSA_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_carlos",
+    "name": "Carlos",
+    "aliases": [
+      {
+        "name": "Carlos",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "NSA_12",
+      "NSA_17"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_carlos_araneda",
+    "name": "Carlos Araneda",
+    "aliases": [
+      {
+        "name": "Carlos Araneda",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_21"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_carlos_morales",
+    "name": "Carlos Morales",
+    "aliases": [
+      {
+        "name": "Carlos Morales",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Morales",
+        "status": "likely",
+        "source": "algorithm",
+        "evidence": "NSA_11: 'Morales in Santo Domingo'; Carlos Morales lives in Santo Domingo (CIA_23)"
+      }
+    ],
+    "reports": [
+      "CIA_23",
+      "CIA_30",
+      "NSA_11",
+      "NSA_16"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_castro",
+    "name": "Castro",
+    "aliases": [
+      {
+        "name": "Castro",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_36"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_cesar_arze",
+    "name": "Cesar Arze",
+    "aliases": [
+      {
+        "name": "Cesar Arze",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Arze",
+        "status": "likely",
+        "source": "algorithm",
+        "evidence": "NSA_16: call between Escalante and Morales, both seen with Cesar Arze (CIA_30)"
+      }
+    ],
+    "reports": [
+      "CIA_3",
+      "CIA_30",
+      "NSA_16"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_david_loiseau",
+    "name": "David Loiseau",
+    "aliases": [
+      {
+        "name": "David Loiseau",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_2"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_fahd_jehani",
+    "name": "Fahd Jehani",
+    "aliases": [
+      {
+        "name": "Fahd Jehani",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_37"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_fahd_khadr",
+    "name": "Fahd Khadr",
+    "aliases": [
+      {
+        "name": "Fahd Khadr",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_2"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_fahd_al_badawi",
+    "name": "Fahd al Badawi",
+    "aliases": [
+      {
+        "name": "Fahd al Badawi",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "F. Badawi",
+        "status": "likely",
+        "source": "algorithm",
+        "evidence": "CIA_11: envelope to F. Badawi found with a stethoscope and medical notes; CIA_6: Fahd al Badawi is a doctor"
+      },
+      {
+        "name": "Dr. Badawi",
+        "status": "likely",
+        "source": "algorithm",
+        "evidence": "CIA_8: Dr. Badawi known from Farooq camp; CIA_6: Fahd al Badawi was on Farooq's medical staff"
+      }
+    ],
+    "reports": [
+      "CIA_6",
+      "CIA_8",
+      "CIA_11",
+      "CIA_20"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_grigory_sizov",
+    "name": "Grigory Sizov",
+    "aliases": [
+      {
+        "name": "Grigory Sizov",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_36"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_hafs_or_halfs",
+    "name": "Hafs or Halfs",
+    "aliases": [
+      {
+        "name": "Hafs or Halfs",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_25"
+    ],
+    "possible_links": [
+      {
+        "id": "p_abdillah_zinedine",
+        "source": "algorithm",
+        "evidence": "FBI_25: a Middle Easterner called 'Hafs' or 'Halfs'; Zinedine's alias is Abu Hafs. Name only."
+      }
+    ]
+  },
+  {
+    "id": "p_hamza_al_midhar",
+    "name": "Hamza al Midhar",
+    "aliases": [
+      {
+        "name": "Hamza al Midhar",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_35",
+      "FBI_41"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_hector_lopez",
+    "name": "Hector Lopez",
+    "aliases": [
+      {
+        "name": "Hector Lopez",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_3"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_howard_clark",
+    "name": "Howard Clark",
+    "aliases": [
+      {
+        "name": "Howard Clark",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_23"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_igor_kolokov",
+    "name": "Igor Kolokov",
+    "aliases": [
+      {
+        "name": "Igor Kolokov",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_1"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_imad_dahdah",
+    "name": "Imad Dahdah",
+    "aliases": [
+      {
+        "name": "Imad Dahdah",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_21"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_j_t_detroit",
+    "name": "J. T. (Detroit)",
+    "aliases": [
+      {
+        "name": "J. T., Detroit",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "J. T.",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "FBI_11 searches for the J. T. in Detroit noted in FBI_8; not identified"
+      }
+    ],
+    "reports": [
+      "FBI_8",
+      "FBI_11"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_jamal_al_quso",
+    "name": "Jamal al Quso",
+    "aliases": [
+      {
+        "name": "Jamal al Quso",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "al Quso",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "FBI_25 refers to the Kansas City apprehension of al Quso reported in FBI_12"
+      }
+    ],
+    "reports": [
+      "FBI_6",
+      "FBI_12",
+      "FBI_25",
+      "CIA_10"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_jamal_al_shibh",
+    "name": "Jamal al Shibh",
+    "aliases": [
+      {
+        "name": "Jamal al Shibh",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_15",
+      "FBI_17"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_jamat_syeed",
+    "name": "Jamat Syeed",
+    "aliases": [
+      {
+        "name": "Jamat Syeed",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_jose",
+    "name": "Jose",
+    "aliases": [
+      {
+        "name": "Jose",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "NSA_12"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_jose_escalante",
+    "name": "Jose Escalante",
+    "aliases": [
+      {
+        "name": "Jose Escalante",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Escalante",
+        "status": "likely",
+        "source": "algorithm",
+        "evidence": "NSA_11: Escalante handles arrangements for Bugarov in Havana; Jose Escalante is in Havana (CIA_21, CIA_25)"
+      }
+    ],
+    "reports": [
+      "CIA_4",
+      "CIA_21",
+      "CIA_25",
+      "CIA_30",
+      "NSA_11",
+      "NSA_16"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_juan",
+    "name": "Juan",
+    "aliases": [
+      {
+        "name": "Juan",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_38"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_kamal_abdullah",
+    "name": "Kamal Abdullah",
+    "aliases": [
+      {
+        "name": "Kamal Abdullah",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "DIA_2"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_khaled_jehani",
+    "name": "Khaled Jehani",
+    "aliases": [
+      {
+        "name": "Khaled Jehani",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_36",
+      "DIA_3"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_khalid_s",
+    "name": "Khalid S.",
+    "aliases": [
+      {
+        "name": "Khalid S.",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_6"
+    ],
+    "possible_links": [
+      {
+        "id": "p_khalid_shamrani",
+        "source": "algorithm",
+        "evidence": "FBI_6: note says 'call Khalid S., Texas'; Khalid Shamrani lives in Texas (FBI_9)."
+      }
+    ]
+  },
+  {
+    "id": "p_khalid_shamrani",
+    "name": "Khalid Shamrani",
+    "aliases": [
+      {
+        "name": "Khalid Shamrani",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_9",
+      "FBI_25",
+      "FBI_32"
+    ],
+    "possible_links": [
+      {
+        "id": "p_khalid_s",
+        "source": "algorithm",
+        "evidence": "FBI_6: note says 'call Khalid S., Texas'; Khalid Shamrani lives in Texas (FBI_9)."
+      }
+    ]
+  },
+  {
+    "id": "p_khalid_taha",
+    "name": "Khalid Taha",
+    "aliases": [
+      {
+        "name": "Khalid Taha",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_6"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_m_m_laurel",
+    "name": "M. M. (Laurel)",
+    "aliases": [
+      {
+        "name": "M. M., Laurel",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "M. M.",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "FBI_11 searches for the M. M. in Laurel noted in FBI_8"
+      }
+    ],
+    "reports": [
+      "FBI_8",
+      "FBI_11"
+    ],
+    "possible_links": [
+      {
+        "id": "p_mounir_mzoudi",
+        "source": "algorithm",
+        "evidence": "FBI_11: one of only two M. M.s in Laurel, MD."
+      },
+      {
+        "id": "p_martha_mason",
+        "source": "algorithm",
+        "evidence": "FBI_11: the other M. M. in Laurel, but she is incarcerated."
+      }
+    ]
+  },
+  {
+    "id": "p_mahmud_al_dahab",
+    "name": "Mahmud al-Dahab",
+    "aliases": [
+      {
+        "name": "Mahmud al-Dahab",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Reginald Cooper",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "FBI_22: Reginald Cooper was subsequently identified as Mahmud al-Dahab"
+      }
+    ],
+    "reports": [
+      "FBI_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_maj_gen_yury_kalinin",
+    "name": "Maj. Gen. Yury Kalinin",
+    "aliases": [
+      {
+        "name": "Maj. Gen. Yury Kalinin",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_17"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_mamdouh_al_hazmi",
+    "name": "Mamdouh al Hazmi",
+    "aliases": [
+      {
+        "name": "Mamdouh al Hazmi",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_8",
+      "CIA_19"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_mamoun_zammar",
+    "name": "Mamoun Zammar",
+    "aliases": [
+      {
+        "name": "Mamoun Zammar",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_35",
+      "FBI_41"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_martha_mason",
+    "name": "Martha Mason",
+    "aliases": [
+      {
+        "name": "Martha Mason",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_11"
+    ],
+    "possible_links": [
+      {
+        "id": "p_m_m_laurel",
+        "source": "algorithm",
+        "evidence": "FBI_11: the other M. M. in Laurel, but she is incarcerated."
+      }
+    ]
+  },
+  {
+    "id": "p_mike_sanders",
+    "name": "Mike Sanders",
+    "aliases": [
+      {
+        "name": "Mike Sanders",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "USCBP_1"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_moataz",
+    "name": "Moataz",
+    "aliases": [
+      {
+        "name": "Moataz",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_37"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_mohamed_essabar",
+    "name": "Mohamed Essabar",
+    "aliases": [
+      {
+        "name": "Mohamed Essabar",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_12"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_mohamed_al_omari",
+    "name": "Mohamed al Omari",
+    "aliases": [
+      {
+        "name": "Mohamed al Omari",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_8"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_mounir_mzoudi",
+    "name": "Mounir Mzoudi",
+    "aliases": [
+      {
+        "name": "Mounir Mzoudi",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_11",
+      "FBI_35",
+      "FBI_41"
+    ],
+    "possible_links": [
+      {
+        "id": "p_m_m_laurel",
+        "source": "algorithm",
+        "evidence": "FBI_11: one of only two M. M.s in Laurel, MD."
+      }
+    ]
+  },
+  {
+    "id": "p_mousa_salah",
+    "name": "Mousa Salah",
+    "aliases": [
+      {
+        "name": "Mousa Salah",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Shadi abu Hoshar",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "FBI_8: Salah was using a Jordanian passport in the name Shadi abu Hoshar"
+      }
+    ],
+    "reports": [
+      "FBI_8"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_muhammed_dandani",
+    "name": "Muhammed Dandani",
+    "aliases": [
+      {
+        "name": "Muhammed Dandani",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_17",
+      "FBI_35",
+      "FBI_40"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_muhammed_mustafa",
+    "name": "Muhammed Mustafa",
+    "aliases": [
+      {
+        "name": "Muhammed Mustafa",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_5",
+      "FBI_23"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_murad",
+    "name": "Murad",
+    "aliases": [
+      {
+        "name": "Murad",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_7"
+    ],
+    "possible_links": [
+      {
+        "id": "p_abdul_murad",
+        "source": "algorithm",
+        "evidence": "CIA_7: Zinedine visiting 'Murad' in Chicago; FBI_6: Abdul Murad found at 2211 Cermak Rd., Chicago."
+      }
+    ]
+  },
+  {
+    "id": "p_muslih_odeh",
+    "name": "Muslih Odeh",
+    "aliases": [
+      {
+        "name": "Muslih Odeh",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_18",
+      "CIA_32",
+      "CIA_42",
+      "NSA_6"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_nadia_mahfouz",
+    "name": "Nadia Mahfouz",
+    "aliases": [
+      {
+        "name": "Nadia Mahfouz",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_nidal_awad",
+    "name": "Nidal Awad",
+    "aliases": [
+      {
+        "name": "Nidal Awad",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_omar_hanif",
+    "name": "Omar Hanif",
+    "aliases": [
+      {
+        "name": "Omar Hanif",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_10",
+      "CIA_24",
+      "CIA_26",
+      "CIA_38",
+      "CIA_42",
+      "CIA_43",
+      "NSA_6"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_omar_mahmoud_othman",
+    "name": "Omar Mahmoud Othman",
+    "aliases": [
+      {
+        "name": "Omar Mahmoud Othman",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_2",
+      "CIA_10"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_omar_al_banna",
+    "name": "Omar al Banna",
+    "aliases": [
+      {
+        "name": "Omar al Banna",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_patrick_o_malley",
+    "name": "Patrick O'Malley",
+    "aliases": [
+      {
+        "name": "Patrick O'Malley",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_1"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_pieter_dopple",
+    "name": "Pieter Dopple",
+    "aliases": [
+      {
+        "name": "Pieter Dopple",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_28",
+      "USCBP_2"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_pyotr_safrygin",
+    "name": "Pyotr Safrygin",
+    "aliases": [
+      {
+        "name": "Pyotr Safrygin",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Safrygin",
+        "status": "likely",
+        "source": "algorithm",
+        "evidence": "Only one Safrygin appears in the data (CIA_5)"
+      },
+      {
+        "name": "Pyotr",
+        "status": "likely",
+        "source": "algorithm",
+        "evidence": "NSA_22: call received at Central Russia Airlines, where Pyotr Safrygin is security director (CIA_5)"
+      }
+    ],
+    "reports": [
+      "CIA_5",
+      "CIA_11",
+      "CIA_17",
+      "CIA_34",
+      "CIA_41",
+      "NSA_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_raeed_beandali",
+    "name": "Raeed Beandali",
+    "aliases": [
+      {
+        "name": "Raeed Beandali",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Ralph Bean",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "FBI_31: 'Raeed Beandali [alias Ralph bean]'; FBI_22: American calling himself Ralph Bean"
+      },
+      {
+        "name": "Ralph bean",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "FBI_31: spelling variant of Ralph Bean"
+      }
+    ],
+    "reports": [
+      "FBI_22",
+      "FBI_31",
+      "CIA_2"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_ramon",
+    "name": "Ramon",
+    "aliases": [
+      {
+        "name": "Ramon",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_37"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_ramundo_ortiz",
+    "name": "Ramundo Ortiz",
+    "aliases": [
+      {
+        "name": "Ramundo Ortiz",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_28",
+      "CIA_9",
+      "CIA_14",
+      "CIA_25"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_ramzi_al_shibh",
+    "name": "Ramzi al Shibh",
+    "aliases": [
+      {
+        "name": "Ramzi al Shibh",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_37"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_riduan_sungkar",
+    "name": "Riduan Sungkar",
+    "aliases": [
+      {
+        "name": "Riduan Sungkar",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Omar Evertts",
+        "status": "confirmed",
+        "source": "manual",
+        "evidence": "CIA_13: Sungkar carried a Dutch passport in the name Omar Evertts"
+      }
+    ],
+    "reports": [
+      "FBI_3",
+      "CIA_13"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_rifai_qasim",
+    "name": "Rifai Qasim",
+    "aliases": [
+      {
+        "name": "Rifai Qasim",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Omar Blakely",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "FBI_23: 'Rifai Qasim [alias Omar Blakely]'; FBI_5: passport photo matches Blakely"
+      }
+    ],
+    "reports": [
+      "FBI_5",
+      "FBI_23",
+      "FBI_31"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_rinaldo",
+    "name": "Rinaldo",
+    "aliases": [
+      {
+        "name": "Rinaldo",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "NSA_17"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_riyad_said",
+    "name": "Riyad Said",
+    "aliases": [
+      {
+        "name": "Riyad Said",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Jose Ramirez",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "NSA_19: Riyad Said has been using the alias 'Jose Ramirez'"
+      }
+    ],
+    "reports": [
+      "NSA_19"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_riyad_yasser",
+    "name": "Riyad Yasser",
+    "aliases": [
+      {
+        "name": "Riyad Yasser",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_2"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_riyad_al_taifi",
+    "name": "Riyad al Taifi",
+    "aliases": [
+      {
+        "name": "Riyad al Taifi",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_13",
+      "FBI_19"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_ruth_tucker",
+    "name": "Ruth Tucker",
+    "aliases": [
+      {
+        "name": "Ruth Tucker",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_13"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_s_h",
+    "name": "S. H.",
+    "aliases": [
+      {
+        "name": "S. H.",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_37"
+    ],
+    "possible_links": [
+      {
+        "id": "p_saeed_hasham",
+        "source": "algorithm",
+        "evidence": "CIA_37: message to 'S. H in Chitral'; DIA_2: Saeed Hasham sought refuge in Chitral."
+      }
+    ]
+  },
+  {
+    "id": "p_saeed_hasham",
+    "name": "Saeed Hasham",
+    "aliases": [
+      {
+        "name": "Saeed Hasham",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Hamid Qatada",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "CIA_6: 'Saeed Hasham [aliases: Hamid Qatada, Yasir Salman]'"
+      },
+      {
+        "name": "Yasir Salman",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "CIA_6: listed alias of Saeed Hasham"
+      },
+      {
+        "name": "Hasham",
+        "status": "likely",
+        "source": "algorithm",
+        "evidence": "CIA_8: 'Hasham' known from Farooq camp; CIA_6: Saeed Hasham headed Farooq camp"
+      }
+    ],
+    "reports": [
+      "CIA_6",
+      "CIA_8",
+      "CIA_11",
+      "CIA_22",
+      "CIA_24",
+      "DIA_2"
+    ],
+    "possible_links": [
+      {
+        "id": "p_s_h",
+        "source": "algorithm",
+        "evidence": "CIA_37: message to 'S. H in Chitral'; DIA_2: Saeed Hasham sought refuge in Chitral."
+      }
+    ]
+  },
+  {
+    "id": "p_saeed_al_nami",
+    "name": "Saeed al Nami",
+    "aliases": [
+      {
+        "name": "Saeed al Nami",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_13",
+      "FBI_19"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_said_khadr",
+    "name": "Said Khadr",
+    "aliases": [
+      {
+        "name": "Said Khadr",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_35",
+      "FBI_40"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_satam_derwish",
+    "name": "Satam Derwish",
+    "aliases": [
+      {
+        "name": "Satam Derwish",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Ronald Derwish",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "CIA_16: Satam Derwish has used the first name Ronald since 1992"
+      },
+      {
+        "name": "Ronald",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "FBI_31, FBI_34, FBI_36: 'Satam [alias Ronald] Derwish'"
+      },
+      {
+        "name": "R. Derwish",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "CIA_16: the R. Derwish of 811 Tecumseh Rd. (NSA_4) is Satam Derwish"
+      }
+    ],
+    "reports": [
+      "FBI_31",
+      "FBI_34",
+      "FBI_36",
+      "CIA_16",
+      "NSA_4",
+      "DIA_3"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_shukri_azzam",
+    "name": "Shukri Azzam",
+    "aliases": [
+      {
+        "name": "Shukri Azzam",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_22"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_slade_goodman",
+    "name": "Slade Goodman",
+    "aliases": [
+      {
+        "name": "Slade Goodman",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_19",
+      "FBI_25"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_talat_rushdi",
+    "name": "Talat Rushdi",
+    "aliases": [
+      {
+        "name": "Talat Rushdi",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "DIA_2"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_wali_shakur",
+    "name": "Wali Shakur",
+    "aliases": [
+      {
+        "name": "Wali Shakur",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_10",
+      "FBI_14",
+      "FBI_35",
+      "FBI_41"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_walter_smith",
+    "name": "Walter Smith",
+    "aliases": [
+      {
+        "name": "Walter Smith",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "FBI_12",
+      "FBI_25"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_yazid_bafaba",
+    "name": "Yazid Bafaba",
+    "aliases": [
+      {
+        "name": "Yazid Bafaba",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      },
+      {
+        "name": "Y. Bafaba",
+        "status": "confirmed",
+        "source": "algorithm",
+        "evidence": "CIA_13 and FBI_3 give the same address, 773 Flaxton St., Culver City"
+      }
+    ],
+    "reports": [
+      "FBI_3",
+      "CIA_13",
+      "DIA_3"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_zakarya_ziyad",
+    "name": "Zakarya Ziyad",
+    "aliases": [
+      {
+        "name": "Zakarya Ziyad",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_7"
+    ],
+    "possible_links": []
+  },
+  {
+    "id": "p_al_ghamdi",
+    "name": "al Ghamdi",
+    "aliases": [
+      {
+        "name": "al Ghamdi",
+        "status": "primary",
+        "source": null,
+        "evidence": null
+      }
+    ],
+    "reports": [
+      "CIA_40"
+    ],
+    "possible_links": []
+  }
+]
