@@ -69,7 +69,7 @@
 
   /** Shown when nothing is selected: how to use the tool, and a start list. */
   function renderOverview(container) {
-    container.append("h2").text("Report Explorer");
+    container.append("h2").text("Report Explorer Instructions");
     container.append("p").attr("class", "meta")
       .text(`${data.nodes.length} people named across ${data.reports.length} reports.`);
     const help = container.append("ul").attr("class", "help");
