@@ -74,7 +74,7 @@
       .text(`${data.nodes.length} people named across ${data.reports.length} reports.`);
     const help = container.append("ul").attr("class", "help");
     help.html(
-      "<li>Click a person< to see a summary of what they did, their other names, " +
+      "<li>Click a person to see a summary of what they did, their other names, " +
       "connections and reports. Their reports are also highlighted in the network.</li>" +
       "<li>A person's reports is initially collapsed to a short summary, click a report to read it in full.</li>" +
       "<li>Click a report icon (or a line to it) to open that report and see who it names.</li>" +
