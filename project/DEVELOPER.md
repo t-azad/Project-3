@@ -1,0 +1,131 @@
+# Developer guide
+
+A short guide for team members who want to change the Report Explorer.
+
+## The big picture
+
+The project has two halves that never run at the same time:
+
+1. **Processing (Python, run once).** Scripts in `processing/` read
+   `data/input/dataset.txt`, clean it up and write the page's data into
+   `web/data/`. Run them again only when the dataset or a file in
+   `data/manual/` changes.
+2. **The page (JavaScript, runs in the browser).** `web/index.html` loads
+   the data from `web/data/` and draws the interface. No server is needed:
+   open the file in a browser.
+
+```
+dataset.txt ──► processing/run_all.py ──► web/data/*.js ──► web/index.html
+                  (steps 1 to 5)            (data files)      (the tool)
+                      ▲
+     data/manual/ (decisions made by hand: aliases, AI summaries)
+```
+
+## Processing: what each step does
+
+| Step | Reads | Writes | In one sentence |
+|------|-------|--------|-----------------|
+| 1 `step1_parse_reports.py` | `dataset.txt` | `reports_raw.json` | Splits the text into reports with fields (date, people, places, text). |
+| 2 `step2_person_candidates.py` | (used by step 3) | nothing | Suggests names that might be the same person. |
+| 3 `step3_resolve_persons.py` | step 1 output, `person_review.json` | `persons.json`, `reports_resolved.json` | Applies the reviewed decisions: merges aliases, splits a shared name. |
+| 4 `step4_build_network.py` | step 3 output | `web/data/network.js` | People, reports and the links between them. |
+| 5 `step5_build_ai_summaries.py` | `data/manual/ai_summaries/` | `web/data/ai_summaries.js` | Checks that every person has a summary and copies them for the page. |
+
+Rebuild everything with `python3 processing/run_all.py` (standard library
+only, nothing to install). Never edit files in `data/generated/` or
+`web/data/` by hand: they are overwritten on every run.
+
+## The page: how the files work together
+
+The scripts load in this order (see the bottom of `index.html`). Each file
+only uses files loaded before it.
+
+| File | Job | Adds to `App` |
+|------|-----|---------------|
+| `lib/d3.min.js` | The D3 library | |
+| `data/*.js` | The data, as constants `NETWORK_DATA`, `AI_SUMMARY_DATA` | |
+| `js/app.js` | **Shared state.** The current selection, the undo history, events | creates `App` |
+| `js/tooltip.js` | The hover box | (creates `Tooltip`) |
+| `js/network.js` | The people-and-reports network on the left | `App.network` |
+| `js/summaries.js` | The AI-written summary boxes | `App.summaries` |
+| `js/new_tab.js` | An empty panel tab (see "Task: the new tab") | `App.newTab` |
+| `js/panel.js` | The right-hand panel and its Details tab | `App.panel` |
+| `js/main.js` | Search box, Undo, Reset, keyboard shortcuts; starts everything | |
+
+### The one rule: change the selection only through `App.select`
+
+Everything that is "selected" lives in one place, `App.state.selection`
+(`{type: "person" | "report", id}` or `null`). Parts of the page never talk
+to each other directly. Instead:
+
+```
+a click anywhere ──► App.select({type, id})
+                         │  saves the old selection for Undo
+                         ▼
+                 "selection" event
+            ┌────────────┼─────────────┐
+            ▼            ▼             ▼
+       network.js    panel.js       main.js
+     (highlights)  (redraws the   (clears the search
+                    Details tab)    message)
+```
+
+This is the "brushing and linking" from the lectures: one click updates
+every view. Undo works because `App.select` remembers every previous
+selection; `App.undo()` restores the last one and fires the same event.
+
+To react to a selection in new code, listen for the event (the part after
+the dot is just a unique name for your listener):
+
+```js
+App.events.on("selection.myPart", () => {
+  const sel = App.state.selection;   // what is selected now
+  // ... update your view ...
+});
+```
+
+## Where to change what
+
+| I want to... | Change |
+|--------------|--------|
+| Change colors, sizes or fonts | `web/css/style.css` |
+| Change the help text shown when nothing is selected | `renderOverview` in `panel.js` |
+| Change what a person's Details view shows | `renderPerson` in `panel.js` |
+| Change how report cards look or expand | `reportList` in `panel.js` |
+| Change the person or report icons | `drawPerson` / `drawReport` in `network.js` |
+| Change the network layout (spacing, forces) | the simulation set-up in `network.js` |
+| Fill in the new tab | `new_tab.js` |
+| Change a summary text | the JSON in `data/manual/ai_summaries/`, then rerun `run_all.py` |
+| Merge or split names | `data/manual/person_review.json`, then rerun `run_all.py` |
+| Add a field the page needs | `step4_build_network.py` (or a new step), then rerun `run_all.py` |
+
+## Task: the new tab
+
+The panel has an empty second tab, **New tab**, kept for a team member to
+decide what goes there. Everything else in the tool works without it.
+
+1. Decide what the tab should show. It helps to think about which of the
+   analyst's questions (who, what, when, where) the tool answers least well
+   so far.
+2. Open `web/js/new_tab.js`. Its top comment says how the tab is called and
+   lists the `App` data and functions you can use.
+3. Rename the tab (`label`), and rename the file to match, also in the
+   `<script>` list at the bottom of `index.html`.
+4. Build the content in `render(container)`. Select things only with
+   `App.select(...)`, so the tab stays linked with the network and Undo.
+5. If the tab needs data the page doesn't have, add a processing step: a
+   new script in `processing/` that writes a file to `web/data/` with
+   `js_output.write_js`, a line for it in `run_all.py`, and a `<script>`
+   tag for the file in `index.html` (before `js/app.js`).
+6. Add styles at the end of `web/css/style.css` ("New tab" section).
+
+## Coding conventions
+
+- Every file starts with a comment block: what it does and what it exposes.
+- JavaScript files wrap their code in `(function () { ... })();` so their
+  helper functions stay private. Anything other files need is added to `App`.
+- Use full, meaningful names (`reportById`, not `rb`).
+- Put a short comment above each function saying what it does, and why
+  when it isn't obvious.
+- After a change, open the page, try a few clicks (select a person, open a
+  report, open the new tab, Undo, Esc) and check the browser console has no errors.
