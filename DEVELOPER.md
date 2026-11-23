@@ -92,6 +92,7 @@ App.events.on("selection.myPart", () => {
 | Change the help text shown when nothing is selected | `renderOverview` in `panel.js` |
 | Change what a person's Details view shows | `renderPerson` in `panel.js` |
 | Change how report cards look or expand | `reportList` in `panel.js` |
+| Change how names and places are highlighted in a report | `highlightText` in `panel.js` (colors: `mark.person`, `mark.place` in `style.css`); the place words come from `place_terms()` in `step4_build_network.py` |
 | Change the person or report icons | `drawPerson` / `drawReport` in `network.js` |
 | Change the network layout (spacing, forces) | the simulation set-up in `network.js` |
 | Change the Dates tab | `new_tab.js` |

@@ -95,6 +95,33 @@ def place_names(report):
     return names
 
 
+# Street abbreviations that the report text often spells out in full.
+ABBREVIATIONS = {"St.": "Street", "Ave.": "Avenue", "Rd.": "Road", "Blvd.": "Boulevard"}
+
+
+def place_terms(report):
+    """
+    Words to highlight as places in the report text: every part of every
+    place (address, city, state, country), plus the same address with its
+    abbreviation spelled out ('455 11th St.' -> '455 11th Street') or
+    without the period ('Walden Ave.' -> 'Walden Ave'), since the text
+    often writes them that way. Longest first, so the longest match wins.
+    """
+    terms = set()
+    for place in report["places"]:
+        for part in place["raw"].split("/"):
+            part = part.strip()
+            if not part:
+                continue
+            terms.add(part)
+            spelled_out = part
+            for short, full in ABBREVIATIONS.items():
+                spelled_out = spelled_out.replace(short, full)
+            terms.add(spelled_out)
+            terms.add(part.rstrip("."))
+    return sorted(terms, key=lambda term: (-len(term), term))
+
+
 def build_report_records(reports, persons):
     """Report fields the detail panel needs, sorted by report date."""
     # Every raw name that refers to each identity, for highlighting in text.
@@ -112,6 +139,7 @@ def build_report_records(reports, persons):
             "reference_ids": r["reference_ids"],
             "person_ids": r["person_ids"],
             "places": place_names(r),
+            "place_terms": place_terms(r),
             "dates": unique_dates(r),
             "mentions": {pid: names_by_id[pid] for pid in r["person_ids"]},
         })

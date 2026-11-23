@@ -74,17 +74,18 @@
       .text(`${data.nodes.length} people named across ${data.reports.length} reports.`);
     const help = container.append("ul").attr("class", "help");
     help.html(
-      "<li><b>Click a person</b> to see a summary of what they did, their other names, " +
+      "<li>Click a person< to see a summary of what they did, their other names, " +
       "connections and reports. Their reports are also highlighted in the network.</li>" +
-      "<li>A person's reports start <b>collapsed to a short summary</b>; click a report to read it in full.</li>" +
-      "<li><b>Click a report icon</b> (or a line to it) to open that report and see who it names.</li>" +
-      "<li><b>Click a highlighted name</b> in a report to jump to that person.</li>" +
-      "<li><b>Dashed lines</b> mark names that may belong to the same person.</li>" +
-      "<li><b>Click a selected person or report again</b> to deselect it.</li>" +
-      "<li><b>Undo</b> (or Ctrl+Z) goes back to the previous selection.</li>" +
-      "<li><b>Esc</b> or <b>Reset view</b> clears the selection and shows the whole network.</li>" +
-      "<li>Person summaries are <b>AI-written</b> in advance and may contain errors; " +
-      "open the full reports to check them.</li>");
+      "<li>A person's reports is initially collapsed to a short summary, click a report to read it in full.</li>" +
+      "<li>Click a report icon (or a line to it) to open that report and see who it names.</li>" +
+      "<li>In a full report, <mark class=\"person\">names</mark> are highlighted in yellow " +
+      "(click one to jump to that person) and <mark class=\"place\">places</mark> in green.</li>" +
+      "<li>Dashed lines< mark names that may belong to the same person.</li>" +
+      "<li>Click a selected person or report again< to deselect it.</li>" +
+      "<li><b>Undo</b> button goes back to the previous selection.</li>" +
+      "<li><b>Reset view</b> button clears the selection and shows the whole network.</li>" +
+      "<li>Person summaries are AI-written and may be missing other details. " +
+      "Check the full reports for more information.</li>");
 
     container.append("h3").text("Most-mentioned people");
     const top = [...data.nodes].sort((a, b) => b.report_count - a.report_count).slice(0, 12);
@@ -250,10 +251,12 @@
   /**
    * Return the report text as HTML with person names wrapped in
    * <mark class="person"> (clickable; the focused people get a stronger
-   * highlight).
+   * highlight) and places wrapped in <mark class="place">.
    */
   function highlightText(report, focusIds) {
-    const lookup = new Map();   // lowercase name -> {person: id}
+    const lookup = new Map();   // lowercase text -> {person: id} or {place: true}
+    // Places first, so a person's name wins if the same words are both.
+    for (const term of report.place_terms) lookup.set(term.toLowerCase(), { place: true });
     for (const [personId, names] of Object.entries(report.mentions)) {
       for (const name of names) lookup.set(name.toLowerCase(), { person: personId });
     }
@@ -266,6 +269,7 @@
     return text.replace(pattern, (match, before, found) => {
       const hit = lookup.get(unescapeHtml(found).toLowerCase());
       if (!hit) return match;
+      if (hit.place) return `${before}<mark class="place" title="Place">${found}</mark>`;
       const cls = focusIds.has(hit.person) ? "person focus" : "person";
       return `${before}<mark class="${cls}" data-person="${hit.person}">${found}</mark>`;
     });

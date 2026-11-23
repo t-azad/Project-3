@@ -23,7 +23,8 @@ and all data is pre-built in `web/data/`.
 - **Details panel**: for a person, an AI-written summary, their other
   names with evidence, connections, and their reports collapsed to one-line
   summaries (click a report to read it in full). For a report, the people it
-  names and its full text.
+  names and its full text. In a full report, person names are highlighted
+  in yellow (click one to open that person) and places in green.
 - **Dates tab**: every date mentioned in a report, compared with the date
   the report was written. A date before the report date is labelled
   "Already happened"; a date after it is labelled "Planned" (the event had

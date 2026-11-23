@@ -170,6 +170,7 @@ a.ref, mark.person { cursor: pointer; }
 a.ref { color: var(--node); text-decoration: underline; }
 mark.person { background: var(--mark); border-radius: 2px; }
 mark.person.focus { background: var(--mark-focus); font-weight: 600; }
+mark.place { background: #d4f0dc; color: inherit; border-radius: 2px; }
 
 /* ---------- Panel tabs ---------- */
 
