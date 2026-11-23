@@ -82,7 +82,7 @@
       "(click one to jump to that person) and <mark class=\"place\">places</mark> in green.</li>" +
       "<li>The <b>Dates</b> tab lists every date the reports mention and checks whether it falls " +
       "before or after the day the report was written. Dates that appear after the report was written, " +
-      "may be planned events. Click a row to open its report.</li>"
+      "may be planned events. Click a row to open its report.</li>" +
       "<li>Dashed lines mark names that may belong to the same person.</li>" +
       "<li>Click a selected person or report again< to deselect it.</li>" +
       "<li><b>Undo</b> button goes back to the previous selection.</li>" +
