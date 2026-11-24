@@ -99,27 +99,3 @@ web/           what the page loads: styles, JavaScript, D3, page data
 | `web/js/main.js` | Header controls (search, Undo, Reset) and start-up |
 | `DEVELOPER.md` | Guide for team members changing the code |
 
-## Design history
-
-During development five versions were built and compared, each with a
-different way of supporting the question "what did they plan": threat
-categories, distinctive words (TF-IDF), automatic topics (LDA), similar
-reports and an evidence board, in different combinations. Summaries were
-also compared in three forms: computed (extractive), AI-written, and both.
-The AI-written summaries were kept; the other features, including the
-threat categories and the evidence board, were later removed. The network
-was compared in two forms, people only (people linked when named in the
-same report) and people and reports; the final tool uses people and
-reports, which shows which report connects people. An earlier timeline view
-(report dates and mentioned dates on a time axis) was replaced by a Dates
-tab, a readable list of the same dates; that tab was later removed and then
-rebuilt as the current Dates tab, which labels each mentioned date as already
-happened or planned by comparing it with the report's own date.
-
-## Existing work and AI use
-
-- D3.js v7.9.0 (https://d3js.org), ISC license; see `web/lib/D3_LICENSE.txt`.
-- The summaries in `data/manual/ai_summaries/` were written by an AI
-  assistant (Claude, Anthropic) from the report text; they are labeled as
-  AI-written in the interface. The prompts used must be listed in the
-  project document.
